@@ -1,12 +1,12 @@
 import subprocess
 
-def singleHost(host, packets):
+def pingSingleHost(host, packets):
     if packets < 1:
         packets = 1
 
     command = ['ping', '-c', str(packets), host]
-    return subprocess.call(command) == 0
+    return subprocess.call(command, stdout=subprocess.DEVNULL) == 0
+
 
 if __name__ == "__main__":
-    print(singleHost('192.168.1.1', 1))
-
+    print(singleHost('8.8.8.8', 1))
