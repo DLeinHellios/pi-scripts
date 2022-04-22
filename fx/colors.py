@@ -27,3 +27,10 @@ sequences = {
             ]
         }
 
+
+if __name__ == "__main__":
+    print("----------------------------")
+    print("fx/colors.py\n")
+    print (f"colors:\n{' | '.join(colors.keys())}\n")
+    print (f"sequences:\n{' | '.join(sequences.keys())}\n")
+    print("----------------------------")

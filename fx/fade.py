@@ -1,6 +1,18 @@
 import blinkt, time
 
+
 def fadeIn(rgb, maxBrightness):
+    """
+    Fades a single color in from darkness
+
+    Accepts a single color value, sets all pixels to that value and gradually
+    increases brightness until reaching max value
+
+    Parameters:
+    rgb (int[]): List of numbers corresponding to rgb color values
+    maxBrightness (float): max brightness value from 0.1 - 1.0
+
+    """
     if maxBrightness <= 0 or maxBrightness > 1:
         maxBrightness = 1
 
@@ -18,6 +30,17 @@ def fadeIn(rgb, maxBrightness):
 
 
 def fadeOut(rgb, startBrightness):
+    """
+    Fades a single color out to darkness
+
+    Accepts a single color value, sets all pixels to that value and gradually
+    decreasing brightness until lighting is off
+
+    Parameters:
+    rgb (int[]): List of numbers corresponding to rgb color values
+    startBrightness (float): starting brightness value from 1.0 - 0.1
+
+    """
     if startBrightness <= 0 or startBrightness > 1:
         startBrightness = 1
 
@@ -33,6 +56,14 @@ def fadeOut(rgb, startBrightness):
 
 
 if __name__ == "__main__":
-    fadeIn([120,40,0],.8)
-    time.sleep(10)
-    fadeOut([120,40,0],.8)
+    testColor = [255,255,255]
+    testBrightness = .8
+
+    print("----------------------------")
+    print("fx/fade.py\n")
+    print(f"playing: fadeIn({testColor}, {testBrightness})")
+    fadeIn(testColor, testBrightness)
+    time.sleep(5)
+    print(f"playing: fadeOut({testColor}, {testBrightness})")
+    fadeOut(testColor, testBrightness)
+    print("\n----------------------------")
