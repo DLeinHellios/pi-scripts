@@ -16,10 +16,12 @@ def flashSingle(rgb, brightness, waitTime, reps):
 
     """
     for rep in range(reps):
-        blinkt.clear()
+        # On
+        blinkt.set_all(rgb[0],rgb[1],rgb[2],brightness)
         blinkt.show()
         time.sleep(waitTime)
-        blinkt.set_all(rgb[0],rgb[1],rgb[2],brightness)
+        # Off
+        blinkt.clear()
         blinkt.show()
         time.sleep(waitTime)
 
