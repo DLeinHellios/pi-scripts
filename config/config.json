@@ -7,7 +7,15 @@
         "misters": [
             {   
                 "name": "primary-lan",
-                "ip-address": "192.168.1.11",
+                "ip-address": "192.168.1.85",
+                "credentials": {
+                    "user": "root",
+                    "password": "1"
+                }
+            },
+            {   
+                "name": "primary-wifi",
+                "ip-address": "192.168.1.80",
                 "credentials": {
                     "user": "root",
                     "password": "1"
@@ -16,8 +24,8 @@
         ],
         "download-location": "/home/pi/mister-saves",
         "multiple-misters": false,
-        "long-delay-seconds": 1800,
+        "long-delay-seconds": 3600,
         "short-delay-seconds": 60,
-        "retain-versions": 3
+        "retain-versions": 5
     }
 }

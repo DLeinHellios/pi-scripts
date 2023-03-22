@@ -4,6 +4,10 @@ import time, datetime, os, shutil
 from ftplib import FTP
 
 def main():
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
+    
     settings = config.read_config('mister-saves')
     time.sleep(30) # Wait for network
 

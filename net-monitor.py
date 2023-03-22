@@ -1,8 +1,12 @@
 # net-monitor.py - monitors a single host + internet connection to display simple lighting effect
 import fx, net, config
-import time
+import time, os
 
 def main():
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
+
     settings = config.read_config('net-monitor')
     rgb = fx.sequences[config['color-sequence']]
     hasNet = False
