@@ -14,7 +14,7 @@
                 }
             }
         ],
-        "download-location": "home/pi/mister-saves",
+        "download-location": "/home/pi/mister-saves",
         "multiple-misters": false,
         "long-delay-seconds": 1800,
         "short-delay-seconds": 60,
