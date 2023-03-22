@@ -1,0 +1,23 @@
+{
+    "net-monitor": {
+        "monitor-ip": "192.168.1.55",
+        "color-sequence": "oranges"
+    },
+    "mister-saves": {
+        "misters": [
+            {   
+                "name": "primary-lan",
+                "ip-address": "192.168.1.11",
+                "credentials": {
+                    "user": "root",
+                    "password": "1"
+                }
+            }
+        ],
+        "download-location": "home/pi/mister-saves",
+        "multiple-misters": false,
+        "long-delay-seconds": 1800,
+        "short-delay-seconds": 60,
+        "retain-versions": 3
+    }
+}
