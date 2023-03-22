@@ -8,7 +8,7 @@ def main():
     os.chdir(dname)
 
     settings = config.read_config('net-monitor')
-    rgb = fx.sequences[config['color-sequence']]
+    rgb = fx.sequences[settings['color-sequence']]
     hasNet = False
     isOn = False
     time.sleep(30) # Wait for network

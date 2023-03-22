@@ -21,9 +21,7 @@ sequences = {
             ],
         "oranges": [
             colors["orange1"],
-            [170,35,0],
-            colors["yellow1"],
-            [170,35,0],
+            [170,35,0]
             ]
         }
 
