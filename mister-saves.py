@@ -38,7 +38,11 @@ def main():
                     print(f"Downloading saves to {downloadPath}")
                     ftp.cwd("/media/fat/saves")
                     cores = ftp.nlst()
+                    cores.sort()
                     for core in cores:
+                        if core in settings['exclude-cores']:
+                            print(f"> Skipping core '{core}'")
+                            continue
                         ftp.cwd(f"/media/fat/saves/{core}")
                         savelist = ftp.nlst()
                         if len(savelist):
