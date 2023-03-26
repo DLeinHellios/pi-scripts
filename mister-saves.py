@@ -66,7 +66,7 @@ def main():
                     backupList = os.listdir(f"{settings['download-location']}/{mister['name']}")
                     backupList.sort(reverse=True)
                     if len(backupList) > settings['retain-versions']:
-                        for version in backupList[3:]:
+                        for version in backupList[settings['retain-versions']:]:
                             shutil.rmtree(f"{settings['download-location']}/{mister['name']}/{version}")
                     print("Successfully pruned old versions")
                 except:
